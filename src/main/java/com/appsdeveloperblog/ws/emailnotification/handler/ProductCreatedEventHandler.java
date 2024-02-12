@@ -32,7 +32,7 @@ public class ProductCreatedEventHandler {
 		LOGGER.info("Received a new event: " + productCreatedEvent.getTitle() + " with productId: "
 				+ productCreatedEvent.getProductId());
 
-		String requestUrl = "http://localhost:8082/response/200";
+/*		String requestUrl = "http://localhost:8082/response/200";
 
 		try {
 			ResponseEntity<String> response = restTemplate.exchange(requestUrl, HttpMethod.GET, null, String.class);
@@ -49,7 +49,7 @@ public class ProductCreatedEventHandler {
 		} catch (Exception ex) {
 			LOGGER.error(ex.getMessage());
 			throw new NotRetryableException(ex);
-		}
+		}*/
 
 	}
 

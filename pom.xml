@@ -10,19 +10,19 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.appsdeveloperblog.ws</groupId>
-	<artifactId>EmailNotificationMicroservice</artifactId>
+	<artifactId>emailnotif</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>EmailNotificationMicroservice</name>
+	<name>emailnotif</name>
 	<description>Email Notification Microservice</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
 	<dependencies>
-		<dependency>
-			<groupId>com.appsdeveloperblog.ws</groupId>
-			<artifactId>core</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
+<!--		<dependency>-->
+<!--			<groupId>com.appsdeveloperblog.ws</groupId>-->
+<!--			<artifactId>core</artifactId>-->
+<!--			<version>0.0.1-SNAPSHOT</version>-->
+<!--		</dependency>-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>

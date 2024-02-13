@@ -29,6 +29,10 @@ public class ProductCreatedEventHandler {
 
 	@KafkaHandler
 	public void handle(ProductCreatedEvent productCreatedEvent) {
+
+		// force to throw exception for testing
+		//if(true) throw new NotRetryableException("An error took place. No need to consume this message");
+
 		LOGGER.info("Received a new event: " + productCreatedEvent.getTitle() + " with productId: "
 				+ productCreatedEvent.getProductId());
 

@@ -47,11 +47,9 @@ public class KafkaConsumerConfiguration {
 	}
 
 	@Bean
-	ConcurrentKafkaListenerContainerFactory<String, Object> kafkaListenerContainerFactory(
-			ConsumerFactory<String, Object> consumerFactory, KafkaTemplate<String, Object> kafkaTemplate) {
+	ConcurrentKafkaListenerContainerFactory<String, Object> kafkaListenerContainerFactory(ConsumerFactory<String, Object> consumerFactory, KafkaTemplate<String, Object> kafkaTemplate) {
 		
-		DefaultErrorHandler errorHandler = new DefaultErrorHandler(new DeadLetterPublishingRecoverer(kafkaTemplate),
-				new FixedBackOff(5000,3));
+		DefaultErrorHandler errorHandler = new DefaultErrorHandler(new DeadLetterPublishingRecoverer(kafkaTemplate),new FixedBackOff(5000,3));
 		errorHandler.addNotRetryableExceptions(NotRetryableException.class);
 		errorHandler.addRetryableExceptions(RetryableException.class);
 
